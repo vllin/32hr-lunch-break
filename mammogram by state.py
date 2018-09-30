@@ -1,5 +1,5 @@
 import csv
-with open('highblood.csv') as filecsv:
+with open('Asthma.csv') as filecsv:
 	reader = csv.reader(filecsv, delimiter=',')
 	d={}
 	d2={}
@@ -19,7 +19,7 @@ with open('highblood.csv') as filecsv:
 		if check == False:
 			d2[row[2]] = 1
 			d[row[2]] = float(row[12])
-	with open('highblood by State.csv', 'w') as edi:
+	with open('Asthma by State.csv', 'w') as edi:
 		reader2 = csv.writer(edi)
 		for key in d.keys():
 			reader2.writerow([key, d[key]/d2[key]])
